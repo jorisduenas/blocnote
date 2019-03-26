@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_open"
+        android:title="@string/btn_ouvrir"
+        android:icon="@drawable/ic_action_open"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_save"
+        android:title="@string/btn_enregistrer"
+        android:icon="@drawable/ic_action_save"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_suppr"
+        android:title="@string/btn_supprimer"
+        android:icon="@drawable/ic_action_delete"
+        app:showAsAction="ifRoom"/>
+</menu>

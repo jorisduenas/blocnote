@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Bloc Note</string>
+    <string name="btn_ouvrir">Ouvrir</string>
+    <string name="btn_enregistrer">Enregistrer</string>
+    <string name="btn_nouveau">Nouveau</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_supprimer">Supprimer</string>
+    <string name="lib_titre">Titre de la note : </string>
+    <string name="lib_note">Saisir note : </string>
+
+</resources>
