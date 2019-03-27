@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bocnote.untam.blocnote.MainActivity"
     android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/ongletControles"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnOuvrir"
-            android:text="@string/btn_ouvrir"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnNouveau"
-            android:text="@string/btn_nouveau"/>
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/divSaisieNote"
@@ -39,7 +24,8 @@
             android:id="@+id/saiTitre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="300px"/>
+            android:width="300px"
+            android:inputType="textCapWords"/>
 
         <TextView
             android:id="@+id/libSaiNote"
@@ -47,48 +33,20 @@
             android:layout_height="wrap_content"
             android:text="@string/lib_note"
             android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
         <EditText
             android:id="@+id/saiNote"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnEnregistrer"
-                android:text="@string/btn_enregistrer"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnReset"
-                android:text="@string/btn_reset"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnSupprimer"
-                android:text="@string/btn_supprimer"/>
-        </LinearLayout>
+            android:inputType="textCapWords" />
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/divSelectNote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10px">
-        <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ListView>
-    </LinearLayout>
-    <TextView
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnNouveau"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtMessage"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_action_add"
+        android:layout_margin="16dp" />
 
-</LinearLayout>
+</RelativeLayout>

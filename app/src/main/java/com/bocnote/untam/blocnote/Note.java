@@ -9,7 +9,7 @@ public class Note {
     private String titre;
     private String note;
 
-    public Note (){}
+    public Note (){};
     public Note (int id, String titre, String note ){
         this.id=id;
         this.titre=titre;

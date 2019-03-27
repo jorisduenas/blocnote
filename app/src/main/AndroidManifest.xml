@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ListeNotesActivity"
+            android:label="@string/title_liste_notes_activity" />
     </application>
 
 </manifest>

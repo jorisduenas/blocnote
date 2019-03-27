@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Bloc Note</string>
+    <string name="title_liste_notes_activity">Notes</string>
     <string name="btn_ouvrir">Ouvrir</string>
     <string name="btn_enregistrer">Enregistrer</string>
     <string name="btn_nouveau">Nouveau</string>
@@ -7,5 +8,5 @@
     <string name="btn_supprimer">Supprimer</string>
     <string name="lib_titre">Titre de la note : </string>
     <string name="lib_note">Saisir note : </string>
-
+    <string name="menu_open">Ouvrir</string>
 </resources>

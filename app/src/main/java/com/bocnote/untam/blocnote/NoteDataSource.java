@@ -36,7 +36,7 @@ public class NoteDataSource {
     public Note createNote(String titre, String note) throws NoteExisteException {
         Note newNote = new Note();
         if(noteExist(titre)){
-            throw new NoteExisteException("Le titre de votre note est déjà utilisé !");
+            throw new NoteExisteException("Le titre de votre note est déjà utilisé ! neheh");
         }
         else{
             ContentValues values = new ContentValues();
@@ -54,10 +54,15 @@ public class NoteDataSource {
 
         return newNote;
     }
-    public boolean noteExist(String titre){
+    private boolean noteExist(String titre){
         boolean res;
         Cursor cursor=database.rawQuery("SELECT * FROM notes WHERE titre = '"+titre+"'", null);
-        res = cursor.getCount() > 0;
+        if (cursor.getCount()>0){
+            res = true;
+        }
+        else{
+            res = false;
+        }
         cursor.close();
         return res;
     }
@@ -76,6 +81,13 @@ public class NoteDataSource {
         System.out.println("Note deleted with id: " + id);
         database.delete(NoteMySQLiteHelper.TABLE_NOTE, NoteMySQLiteHelper.COLUMN_ID
                 + " = " + id, null);
+    }
+
+    public void updateNote(int id, String titre, String note) throws  NoteExisteException{
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NoteMySQLiteHelper.COLUMN_TITRE, titre);
+        contentValues.put(NoteMySQLiteHelper.COLUMN_NOTE, note);
+        database.update(NoteMySQLiteHelper.TABLE_NOTE, contentValues, NoteMySQLiteHelper.COLUMN_ID+"="+id, null);
     }
     public List<Note> getAllNotes (){
         List<Note> notes = new ArrayList<Note>();
